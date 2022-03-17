@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: nodejs
+  name: node
 spec:
   generators:
   - list:
@@ -10,7 +10,8 @@ spec:
         url: https://kubernetes.default.svc
         values:
           replicaCount: '2'
-          image.tag: '1.1.0'  
+          image.repository: 'sai8465/angularjs'  
+          image.tag: '1.0.0'  
       - cluster: hyd
         url: https://vc-slovgncdugkndjcvlemy.zlr-dc1.apps.dev.klusternetes.com
         values:
@@ -35,7 +36,9 @@ spec:
           - name: replicaCount
             value: '{{values.replicaCount}}'
           - name: image.tag
-            value: '{{values.image.tag}}'    
+            value: '{{values.image.tag}}' 
+          - name: image.repository
+            value: '{{values.image.repository}}'   
       destination:
         server: '{{url}}'
         namespace: default
