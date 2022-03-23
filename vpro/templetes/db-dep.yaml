@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: db01
+  name: db01
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: db01
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: db01
+    spec:
+      containers:
+      - image: sai8465/vprodb:latest
+        name: vprodb
+        resources: {}
+status: {}

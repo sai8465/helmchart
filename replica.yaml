@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
-  name: nodejs
+  name: test
 spec:
   generators:
   - list:
@@ -10,26 +10,26 @@ spec:
         url: https://kubernetes.default.svc
         values:
           replicaCount: '2'
-          image.tag: '1.1.0'  
+          image.tag: '1.0.0'  
       - cluster: hyd
         url: https://vc-slovgncdugkndjcvlemy.zlr-dc1.apps.dev.klusternetes.com
         values:
           replicaCount: '3'
-          image.tag: '1.2.0'  
+          image.tag: '1.0.0'  
       - cluster: mumbai
         url: https://vc-cj9ris5rz36w1gm7khce.zlr-dc1.apps.dev.klusternetes.com
         values:
           replicaCount: '4'
-          image.tag: '1.5.0'  
+          image.tag: '1.0.0'  
   template:
     metadata:
-      name: '{{cluster}}-nodejs'
+      name: '{{cluster}}-test'
     spec:
       project: default
       source:
         repoURL: https://github.com/sai8465/helmchart.git
         targetRevision: HEAD
-        path: nodejs
+        path: angular
         helm:
           parameters:
           - name: replicaCount
