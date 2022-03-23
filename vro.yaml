@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: vpro
+spec:
+  generators:
+  - list:
+      elements:
+      - cluster: in-cluster
+        url: https://kubernetes.default.svc
+  template:
+    metadata:
+      name: '{{cluster}}-vpro'
+    spec:
+      project: default
+      source:
+        repoURL: https://github.com/sai8465/helmchart.git
+        targetRevision: HEAD
+        path: vpro
+      destination:
+        server: '{{url}}'
+        namespace: default
