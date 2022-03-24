@@ -20,5 +20,8 @@ spec:
       containers:
       - image: memcached:latest
         name: memcached
+        ports:
+        - name: vpromc-port
+          containerPort: 11211
         resources: {}
 status: {}
