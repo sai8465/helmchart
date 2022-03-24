@@ -7,10 +7,9 @@ metadata:
   name: mem
 spec:
   ports:
-  - name: 11211-11211
     port: 11211
     protocol: TCP
-    targetPort: 11211
+    targetPort: vpromc-port
   selector:
     app: mem
   type: ClusterIP
