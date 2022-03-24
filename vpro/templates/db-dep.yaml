@@ -22,6 +22,6 @@ spec:
         name: vprodb
         env:
         - name: MYSQL_ROOT_PASSWORD
-          value: admin
+          value: vpropass
         resources: {}
 status: {}
