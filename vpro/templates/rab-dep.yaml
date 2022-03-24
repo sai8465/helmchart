@@ -20,5 +20,16 @@ spec:
       containers:
       - image: rabbitmq:latest
         name: rabbitmq
+        ports:
+        - name: vpromq01-port
+          containerPort: 15672
+        env: 
+         - name: RABBITMQ_DEFAULT_PASS
+           valueFrom:
+             secretKeyRef:
+               name: app-secret
+               key: rmq-pass
+         - name: RABBITMQ_DEFAULT_USER
+           value: "test"
         resources: {}
 status: {}
