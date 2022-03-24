@@ -20,6 +20,9 @@ spec:
       containers:
       - image: sai8465/vprodb:latest
         name: vprodb
+        ports:
+        - name: vprodb-port
+          containerPort: 3306
         env:
         - name: MYSQL_ROOT_PASSWORD
           value: vpropass
