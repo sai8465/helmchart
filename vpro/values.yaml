@@ -1,11 +1,15 @@
 vpro:
 app01:
-  tag: sai8465/vproapp:latest
+  tag: sai8465/vproapp:latestweb01:
+10
+  tag: sai8465/vproweb:latest  
 db01:
   tag: sai8465/vprodb:latest
   dbuser: "admin"
   dbname: "accounts"
   dbpassword: "admin"
-web01:
-  tag: sai8465/vproweb:latest  
 
+
+web01:
+10
+  tag: sai8465/vproweb:latest  
