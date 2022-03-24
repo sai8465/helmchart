@@ -20,5 +20,8 @@ spec:
       containers:
       - image: sai8465/vprodb:latest
         name: vprodb
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          value: admin
         resources: {}
 status: {}
