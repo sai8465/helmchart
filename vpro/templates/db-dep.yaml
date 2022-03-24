@@ -23,8 +23,5 @@ spec:
         env:
         - name: MYSQL_ROOT_PASSWORD
           value: admin
-        volumeMounts:
-        - name: mysql-persistent-storage
-          mountPath: /var/lib/mysql
         resources: {}
 status: {}
