@@ -28,6 +28,6 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v2
         with:
-          context:  .
+          context:  sai/.
           push: true
           tags: sai8465/git-ci:latest
