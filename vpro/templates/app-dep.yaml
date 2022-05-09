@@ -18,8 +18,8 @@ spec:
         app: app
     spec:
       containers:
-      - image: sai8465/vproapp:latest
-        name: vproapp
+      - name: vproapp
+        image: sai8465/vproapp:latest
         ports:
         - name: vproapp-port
           containerPort: 8080
