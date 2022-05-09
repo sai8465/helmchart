@@ -1,8 +1,6 @@
 vpro:
 app01:
-  tag: sai8465/vproapp:latestweb01:
-10
-  tag: sai8465/vproweb:latest  
+  tag: sai8465/vproapp:latest  
 db01:
   tag: sai8465/vprodb:latest
   dbuser: "admin"
@@ -11,5 +9,4 @@ db01:
 
 
 web01:
-10
   tag: sai8465/vproweb:latest  
