@@ -6,7 +6,5 @@ db01:
   dbuser: "admin"
   dbname: "accounts"
   dbpassword: "admin"
-
-
 web01:
   tag: sai8465/vproweb:latest  
