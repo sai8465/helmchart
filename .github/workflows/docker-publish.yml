@@ -6,7 +6,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Kaniko build
-        uses: aevea/action-kaniko@master
+        #uses: aevea/action-kaniko@master
         with:
           image: aevea/kaniko
           username: ${{ secrets.DOCKERHUB_USERNAME }}
