@@ -39,4 +39,4 @@ jobs:
         with:
           context:  sai/.
           push: true
-          tags: sai8465/git-ci:latest
+          tags: ghcr.io/sai8465/git-ci:latest
