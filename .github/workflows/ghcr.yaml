@@ -21,4 +21,4 @@ jobs:
           platforms: linux/amd64,linux/arm64
           context:  sai/.
           push: true
-          tags: ghcr.io/${{ github.repository }}:latest
+          tags: ghcr.io/sai8465:latest
